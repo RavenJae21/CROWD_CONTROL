@@ -88,6 +88,7 @@ public class GunScript : MonoBehaviour
                 else
                 {
                     targetPoint = cameraRay.GetPoint(1000); // Otherwise, aim far into the distance
+                    Debug.Log("" + targetPoint);
                 }
 
                 // Calculate bullet direction
