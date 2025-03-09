@@ -6,8 +6,8 @@ public class BulletScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-
         Destroy(gameObject); // Destroy bullet on impact with anything with a collider
+        Debug.Log("You hit: " + collision.gameObject.name); // prints out name of the object the bullet hits
     }
 
     void Start()
