@@ -6,6 +6,7 @@ public class BulletScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+
         Destroy(gameObject); // Destroy bullet on impact with anything with a collider
     }
 
