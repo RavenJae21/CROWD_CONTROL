@@ -60,6 +60,7 @@ public class GunScript : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1") && Time.time >= nextFireTime)
             {
+                //audioSource.play
                 Shoot();
             }
         }
