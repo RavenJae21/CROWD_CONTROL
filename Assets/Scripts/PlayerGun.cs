@@ -3,6 +3,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine.UI;
 
+
 public class GunScript : MonoBehaviour
 {
     [Header("Gun Settings")]
@@ -15,6 +16,7 @@ public class GunScript : MonoBehaviour
     public float bulletSpeed = 20f; // Speed of the bullet
     public int bulletsPerShot = 1; // Number of bullets per shot
     public float bulletSpread = 0f; // Angle variation for guns with spread
+    public AudioSource audioSource;
 
     [Header("Ammo Settings")]
     public int maxAmmo = 10; // Max bullets in a magazine
@@ -54,14 +56,15 @@ public class GunScript : MonoBehaviour
             if (Input.GetButton("Fire1") && Time.time >= nextFireTime) //slight difference between GetButton and GetButtonDown helps us read holding down the fire button or clicking it once
             {
                 Shoot();
+                audioSource.Play();
             }
         }
         else
         {
             if (Input.GetButtonDown("Fire1") && Time.time >= nextFireTime)
             {
-                //audioSource.play
                 Shoot();
+                audioSource.Play();
             }
         }
 
@@ -94,7 +97,7 @@ public class GunScript : MonoBehaviour
 
                 // Calculate bullet direction
                 Vector3 shootDirection = (targetPoint - firePoint.position).normalized; //normalize keeps the direction but sets the magnitude to 1
-
+                
                 // Add spread (horizontal and vertical)
                 float spreadX = Random.Range(-bulletSpread, bulletSpread);
                 float spreadY = Random.Range(-bulletSpread, bulletSpread);
@@ -104,6 +107,7 @@ public class GunScript : MonoBehaviour
                 shootDirection = spreadRotation * shootDirection;
 
                 // Spawn bullet
+                
                 GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.LookRotation(shootDirection));
                 Rigidbody rb = bullet.GetComponent<Rigidbody>();
                 if (rb != null)
