@@ -34,19 +34,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6564b5d3c4cca944892ae5ceeecf630b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6804245
+      value: 0.34507665
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6564b5d3c4cca944892ae5ceeecf630b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.6804245
+      value: -0.34507665
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6564b5d3c4cca944892ae5ceeecf630b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.19241242
+      value: 0.61718893
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6564b5d3c4cca944892ae5ceeecf630b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.19241242
+      value: 0.61718893
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6564b5d3c4cca944892ae5ceeecf630b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6564b5d3c4cca944892ae5ceeecf630b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6564b5d3c4cca944892ae5ceeecf630b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -78,6 +78,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6564b5d3c4cca944892ae5ceeecf630b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2552442086672207058}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6564b5d3c4cca944892ae5ceeecf630b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1709752278215051230}
   m_SourcePrefab: {fileID: 100100000, guid: 6564b5d3c4cca944892ae5ceeecf630b, type: 3}
 --- !u!1 &7976061391975282879 stripped
 GameObject:
@@ -101,7 +104,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.04710713, y: 0.017673654, z: 0.017712472}
   m_Center: {x: -0.0000007944556, y: -0.0009810395, z: 0.0010605534}
@@ -118,3 +121,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   survivalTime: 3
+--- !u!54 &-1709752278215051230
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7976061391975282879}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
