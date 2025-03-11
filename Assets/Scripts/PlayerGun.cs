@@ -136,7 +136,7 @@ public class GunScript : MonoBehaviour
 
     void UpdateAmmoUI()
     {
-        if (ammoText != null) //assumes we have a reference to some text in the canvas
+        if (ammoText == null) //assumes we have a reference to some text in the canvas
         {
             if (!isReloading)
             {
