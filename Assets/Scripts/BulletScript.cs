@@ -4,6 +4,7 @@ using TMPro;
 public class BulletScript : MonoBehaviour
 {
     public int points; 
+    public AudioClip audioClip;
     //public AudioSource audioSource;
     public bool hitPerson = false;
 
@@ -13,6 +14,7 @@ public class BulletScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        //AudioSource.PlayClipAtPoint(audioClip, transform.position);
         Destroy(gameObject); // Destroy bullet on impact with anything with a collider
         Debug.Log("You hit: " + collision.gameObject.name); // prints out name of the object the bullet hits
         
