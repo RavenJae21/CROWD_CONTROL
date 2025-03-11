@@ -124,7 +124,7 @@ public class GunScript : MonoBehaviour
     System.Collections.IEnumerator Reload()
     {
         isReloading = true;
-       // Debug.Log("Reloading..."); //more of a dev tool, get rid of it if you don't want it
+        Debug.Log("Reloading..."); //more of a dev tool, get rid of it if you don't want it
         UpdateAmmoUI(); //this is so our ui can show that we're reloading
 
         yield return new WaitForSeconds(reloadTime); //wait as long as we've decided it takes to reload
