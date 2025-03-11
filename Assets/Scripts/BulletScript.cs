@@ -16,7 +16,9 @@ public class BulletScript : MonoBehaviour
     {
         //AudioSource.PlayClipAtPoint(audioClip, transform.position);
         Destroy(gameObject); // Destroy bullet on impact with anything with a collider
+       
         Debug.Log("You hit: " + collision.gameObject.name); // prints out name of the object the bullet hits
+       
         
         //if bullet hits object tagged person call update points
         if(collision.gameObject.tag == "Person")
