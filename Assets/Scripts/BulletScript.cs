@@ -4,7 +4,7 @@ using TMPro;
 public class BulletScript : MonoBehaviour
 {
     public int points; 
-
+    //public AudioSource audioSource;
     public bool hitPerson = false;
 
     public TextMeshProUGUI pointsText;
@@ -19,6 +19,8 @@ public class BulletScript : MonoBehaviour
         //if bullet hits object tagged person call update points
         if(collision.gameObject.tag == "Person")
         {
+            //audioSource.Play();
+            
             hitPerson = true;
             Debug.Log("hit person is: " + hitPerson);
             UpdatePoints();
